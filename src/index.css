@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Outfit", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  /* Futuristic glassmorphism card with frosted glass & borders */
+  .glass-card {
+    background: rgba(13, 16, 29, 0.45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  /* Extreme premium glass with indigo border glow */
+  .glass-card-indigo {
+    background: rgba(15, 12, 35, 0.55);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(99, 102, 241, 0.18);
+    box-shadow: 0 12px 40px -5px rgba(99, 102, 241, 0.08), 0 0 30px -10px rgba(99, 102, 241, 0.15);
+  }
+
+  /* Extreme premium glass with cyan border glow */
+  .glass-card-cyan {
+    background: rgba(10, 18, 32, 0.55);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(6, 182, 212, 0.18);
+    box-shadow: 0 12px 40px -5px rgba(6, 182, 212, 0.08), 0 0 30px -10px rgba(6, 182, 212, 0.15);
+  }
+
+  /* Extreme premium glass with purple border glow */
+  .glass-card-purple {
+    background: rgba(20, 11, 35, 0.55);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(168, 85, 247, 0.18);
+    box-shadow: 0 12px 40px -5px rgba(168, 85, 247, 0.08), 0 0 30px -10px rgba(168, 85, 247, 0.15);
+  }
+
+  /* Cyber neon glows */
+  .text-glow-indigo {
+    text-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+  }
+  .text-glow-cyan {
+    text-shadow: 0 0 12px rgba(6, 182, 212, 0.6);
+  }
+  .text-glow-purple {
+    text-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+  }
+
+  /* Floating animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animate-float-slow {
+    animation: float-slow 10s ease-in-out infinite;
+  }
+  .animate-float-fast {
+    animation: float-fast 4s ease-in-out infinite;
+  }
+}
+
+/* Animations declarations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(-1.5deg);
+  }
+}
+
+@keyframes float-fast {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.5deg);
+  }
+}
+
+/* Custom premium tech scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(5, 5, 12, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.25);
+  border-radius: 99px;
+  border: 1px solid rgba(5, 5, 12, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.55);
+}
+
+/* Base style resets and beautiful selection overlays */
+::selection {
+  background: rgba(99, 102, 241, 0.35);
+  color: #ffffff;
+}
+
+body {
+  background-color: #05050e;
+  overflow-x: hidden;
+}

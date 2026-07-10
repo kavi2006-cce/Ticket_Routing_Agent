@@ -1,0 +1,8 @@
+{
+  "name": "Ticket Routing Agent",
+  "description": "Enterprise Customer Support Automation Platform featuring automated ticket classification, department assignment, priority prediction, and a role-based support management system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
